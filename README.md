@@ -1,1 +1,1 @@
-# Ex4_AP_Tester
+Use `python client.py -h` for a list of all flags.
