@@ -23,7 +23,7 @@ algorithm = args.a
 
 sock = socket.socket()
 sock.connect(("127.0.0.1", port))
-sock.send(b"solve find-graph-path {algorithm}{endl*3}")
+sock.send(b"solve find-graph-path {algorithm}{endl*2}")
 print(sock.recv(1000).decode())
 
 with open('matrix', 'r') as f:
@@ -42,7 +42,7 @@ endingPoint = f'{height - 1},{width - 1}'
 if args.e[0] != -1:
     endingPoint = '' + str(args.e[0]) + ',' + str(args.e[1])
 
-message = b"{matString}{endl}{startingPoint}{endl}{endingPoint}{endl*3}"
+message = b"{matString}{endl}{startingPoint}{endl}{endingPoint}{endl*2}"
 sock = socket.socket()
 sock.connect(("127.0.0.1", port))
 sock.send(message)
